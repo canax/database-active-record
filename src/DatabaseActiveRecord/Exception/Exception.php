@@ -1,6 +1,6 @@
 <?php
 
-namespace Anax\Database\Exception;
+namespace Anax\DatabaseActiveRecord\Exception;
 
 /**
  * Namespaced exception.

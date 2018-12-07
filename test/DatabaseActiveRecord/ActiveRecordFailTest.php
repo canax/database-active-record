@@ -1,11 +1,14 @@
 <?php
 
-namespace Anax\Database;
+namespace Anax\DatabaseActiveRecord;
+
+use Anax\DatabaseQueryBuilder\DatabaseQueryBuilder;
+use PHPUnit\Framework\TestCase;
 
 /**
 * A testclass
 */
-class ActiveRecordFailureTest extends \PHPUnit_Framework_TestCase
+class ActiveRecordFailTest extends TestCase
 {
     public static $db;
 
@@ -38,7 +41,7 @@ class ActiveRecordFailureTest extends \PHPUnit_Framework_TestCase
     /**
      * Save an object without injecting the database object.
      *
-     * @expectedException \Anax\Database\Exception\ActiveRecordException
+     * @expectedException \Anax\DatabaseActiveRecord\Exception\ActiveRecordException
      */
     public function testSaveWithoutInjectingDatabase()
     {

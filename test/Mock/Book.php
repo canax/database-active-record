@@ -1,6 +1,6 @@
 <?php
 
-namespace Anax\Database;
+namespace Anax\DatabaseActiveRecord;
 
 /**
  * Mocking a User class to test the ActiveRecordModel.

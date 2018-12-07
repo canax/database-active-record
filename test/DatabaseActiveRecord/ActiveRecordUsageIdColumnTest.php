@@ -1,11 +1,14 @@
 <?php
 
-namespace Anax\Database;
+namespace Anax\DatabaseActiveRecord;
+
+use Anax\DatabaseQueryBuilder\DatabaseQueryBuilder;
+use PHPUnit\Framework\TestCase;
 
 /**
 * A testclass
 */
-class ActiveRecordUsageIdColumnTest extends \PHPUnit_Framework_TestCase
+class ActiveRecordUsageIdColumnTest extends TestCase
 {
     public static $db;
     public static $idColumn = "idColumn";

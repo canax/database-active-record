@@ -1,20 +1,18 @@
 {
     "name": "anax/database-active-record",
     "type": "library",
-    "description": "Anax Database Query Builder module.",
-    "keywords": ["boilerplate", "framework", "mvc", "micro", "education"],
+    "description": "Anax Database Active Record module for model classes.",
+    "keywords": ["database", "query builder", "DBA", "active record"],
     "homepage": "https://dbwebb.se/anax",
     "license": "MIT",
     "authors": [
         {
             "name": "Mikael Roos",
-            "email": "mos@dbwebb.se",
-            "homepage": "https://dbwebb.se",
-            "role": "Developer"
+            "email": "mos@dbwebb.se"
         }
     ],
     "support": {
-        "issues": "https://github.com/canax/database-query-builder/issues"
+        "issues": "https://github.com/canax/database-active-record/issues"
     },
     "autoload": {
         "psr-4": { 
@@ -22,12 +20,11 @@
         }
     },
     "require": {
-        "php": ">=5.6"
-    },
-    "suggest": {
-        "anax/configure": "To enhance integration with Anax framework."
+        "php": ">=7.2"
     },
     "require-dev": {
-        "anax/configure": "^1.0"
+        "phpunit/phpunit": "^7",
+        "anax/database": "^2",
+        "anax/database-query-builder": "^2"
     }
 }

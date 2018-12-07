@@ -1,11 +1,14 @@
 <?php
 
-namespace Anax\Database;
+namespace Anax\DatabaseActiveRecord;
+
+use Anax\DatabaseQueryBuilder\DatabaseQueryBuilder;
+use PHPUnit\Framework\TestCase;
 
 /**
 * A testclass
 */
-class ActiveRecordUsageTest extends \PHPUnit_Framework_TestCase
+class ActiveRecordUsageTest extends TestCase
 {
     public static $db;
 

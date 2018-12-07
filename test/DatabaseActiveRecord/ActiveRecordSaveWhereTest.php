@@ -1,11 +1,14 @@
 <?php
 
-namespace Anax\Database;
+namespace Anax\DatabaseActiveRecord;
+
+use Anax\DatabaseQueryBuilder\DatabaseQueryBuilder;
+use PHPUnit\Framework\TestCase;
 
 /**
 * A testclass
 */
-class ActiveRecordSaveWhereTest extends \PHPUnit_Framework_TestCase
+class ActiveRecordSaveWhereTest extends TestCase
 {
     public static $db;
 

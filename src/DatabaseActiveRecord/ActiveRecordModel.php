@@ -1,9 +1,9 @@
 <?php
 
-namespace Anax\Database;
+namespace Anax\DatabaseActiveRecord;
 
-use \Anax\Database\DatabaseQueryBuilder;
-use \Anax\Database\Exception\ActiveRecordException;
+use Anax\DatabaseActiveRecord\Exception\ActiveRecordException;
+use Anax\DatabaseQueryBuilder\DatabaseQueryBuilder;
 
 /**
  * An implementation of the Active Record pattern to be used as
@@ -17,10 +17,14 @@ class ActiveRecordModel
      */
     protected $db = null;
 
+
+
     /**
      * @var string $tableName name of the database table.
      */
     protected $tableName = null;
+
+
 
     /**
      * @var string $tableIdColumn name of the id column in the database table.
