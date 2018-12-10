@@ -134,12 +134,12 @@ class ActiveRecordModel
     {
         $this->checkDb();
         $params = is_array($value) ? $value : [$value];
-        return $this->db->connect()
-                        ->select()
-                        ->from($this->tableName)
-                        ->where($where)
-                        ->execute($params)
-                        ->fetchInto($this);
+        $this->db->connect()
+                 ->select()
+                 ->from($this ->tableName)
+                 ->where($where)
+                 ->execute($params)
+                 ->fetchInto($this);
     }
 
 
