@@ -3,7 +3,7 @@ Revision history
 
 
 
-v2.0.0-beta.2 (2018-12-07)
+v2.0.0 (2018-12-07)
 ---------------------------------
 
 * Depend on anax/database-query-builder.
