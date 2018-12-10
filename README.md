@@ -57,29 +57,12 @@ All exceptions are in the namespace `Anax\DatabaseActiveRecord\Exception\`. The 
 
 
 
-
-
-
 Basic usage
 ------------------
 
-The Active Record design pattern is implemented through the class `Anax\DatabaseActiveRecord\DatabaseActiveRecord`. A model class which wants to use the implementation should extend this class.
+The Active Record design pattern is implemented through the class `Anax\DatabaseActiveRecord\DatabaseActiveRecord`. A model class which wants to use the implementation should extend this class to get access to the methods implementing Active Record usage.
 
-
-
-You must connect to the database before using it.
-
-You may call `$db->connect()` many times, the connection is however only made once, the first time, so it is safe to call the method several times.
-
-```php
-# $app style
-$app->db->connect();
-
-# $di style
-$di->get("db")->connect();
-```
-
-
+<!-- Here should a basic usa case come, perhaps from the book example -->
 
 
 
