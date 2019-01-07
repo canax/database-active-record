@@ -174,6 +174,36 @@ class ActiveRecordUsageTest extends TestCase
 
 
     /**
+     * Save and find objects by id.
+     */
+    public function testSaveFindById()
+    {
+        $user1 = new User();
+        $user1->setDb(self::$db);
+        $user1->acronym = "user21";
+        $user1->password = "pass21";
+        $user1->save();
+
+        $user2 = new User();
+        $user2->setDb(self::$db);
+        $user2->acronym = "user22";
+        $user2->password = "pass22";
+        $user2->save();
+
+        $user = new User();
+        $user->setDb(self::$db);
+
+        // Find user by id
+        $user->findById($user1->id);
+        $this->assertEquals($user1, $user);
+
+        $user->findById($user2->id);
+        $this->assertEquals($user2, $user);
+    }
+
+
+
+    /**
      * Save, update and find objects.
      */
     public function testSaveUpdateFind()
