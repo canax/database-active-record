@@ -91,7 +91,7 @@ class ActiveRecordModel
      *
      * @return this
      */
-    public function find($column, $value)
+    public function find($column, $value) : object
     {
         return $this->findWhere("$column = ?", $value);
     }
@@ -107,7 +107,7 @@ class ActiveRecordModel
      *
      * @return this
      */
-    public function findById($id = null)
+    public function findById($id = null) : object
     {
         $id = $id ?: $this->{$this->tableIdColumn};
         return $this->findWhere("{$this->tableIdColumn} = ?", $id);
@@ -130,7 +130,7 @@ class ActiveRecordModel
      *
      * @return this
      */
-    public function findWhere($where, $value)
+    public function findWhere($where, $value) : object
     {
         $this->checkDb();
         $params = is_array($value) ? $value : [$value];
@@ -140,6 +140,7 @@ class ActiveRecordModel
                  ->where($where)
                  ->execute($params)
                  ->fetchInto($this);
+        return $this;
     }
 
 

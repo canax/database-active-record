@@ -58,34 +58,40 @@ class ActiveRecordUsageTest extends TestCase
         // find()
         $user3 = new User();
         $user3->setDb(self::$db);
-        $user3->find("acronym", "user1");
+        $res = $user3->find("acronym", "user1");
+        $this->assertEquals($res, $user3);
         $this->assertEquals($user1, $user3);
 
         $user4 = new User();
         $user4->setDb(self::$db);
-        $user4->find("acronym", "user2");
+        $res = $user4->find("acronym", "user2");
+        $this->assertEquals($res, $user4);
         $this->assertEquals($user2, $user4);
 
         // findById()
         $user5 = new User();
         $user5->setDb(self::$db);
-        $user5->findById($user1->id);
+        $res = $user5->findById($user1->id);
+        $this->assertEquals($res, $user5);
         $this->assertEquals($user1, $user5);
 
         $user6 = new User();
         $user6->setDb(self::$db);
-        $user6->findById($user2->id);
+        $res = $user6->findById($user2->id);
+        $this->assertEquals($res, $user6);
         $this->assertEquals($user2, $user6);
 
         // findWhere()
         $user7 = new User();
         $user7->setDb(self::$db);
-        $user7->findWhere("id = ? AND acronym = ?", [$user1->id, "user1"]);
+        $res = $user7->findWhere("id = ? AND acronym = ?", [$user1->id, "user1"]);
+        $this->assertEquals($res, $user7);
         $this->assertEquals($user1, $user7);
 
         $user8 = new User();
         $user8->setDb(self::$db);
-        $user8->findWhere("id = ? AND acronym = ?", [$user2->id, "user2"]);
+        $res = $user8->findWhere("id = ? AND acronym = ?", [$user2->id, "user2"]);
+        $this->assertEquals($res, $user8);
         $this->assertEquals($user2, $user8);
     }
 
